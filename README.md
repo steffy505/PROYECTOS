@@ -1,34 +1,23 @@
-# 🚀 Guía de Despliegue en Netlify - La Casita de las Primas
+# 🚀 Despliegue en Netlify - La Casita de las Primas
 
-Esta aplicación está lista para ser publicada de forma gratuita. Sigue estos pasos para tener tu tienda online en menos de 1 minuto usando **Netlify**.
+Sigue estos pasos para tener tu tienda online gratis hoy mismo:
 
-## 🚀 Opción Recomendada: Netlify Drop (Sin programación)
+## 1. Antes de subir (Muy Importante)
+Abre el archivo `components/CartSidebar.tsx` y realiza estos dos cambios:
+- **Línea 25**: Cambia la URL de `qrImageUrl` por el enlace de tu propio código QR de Yape.
+- **Línea 40**: Cambia el `phoneNumber` por tu número de WhatsApp (incluyendo el código de país, ej: `51900000000`).
 
-Este es el método más rápido:
+## 2. Publicación con Netlify Drop
+1. Guarda todos tus archivos en una carpeta llamada `mi-tienda`.
+2. Ve a [app.netlify.com/drop](https://app.netlify.com/drop) (No necesitas registrarte primero, puedes hacerlo al final).
+3. Arrastra tu carpeta `mi-tienda` al recuadro azul.
+4. En 5 segundos, Netlify te dará una URL pública (ej: `https://tienda-prima-123.netlify.app`).
 
-1.  **Prepara tus archivos**: Asegúrate de tener todos los archivos en una sola carpeta en tu computadora (index.html, App.tsx, constants.ts, etc.).
-2.  **Entra a Netlify**: Ve a [app.netlify.com/drop](https://app.netlify.com/drop).
-3.  **Sube tu carpeta**: Arrastra la carpeta completa al recuadro azul que dice "Drag and drop your site folder here".
-4.  **¡Listo!**: Netlify te dará una URL (ejemplo: `https://wonderful-cookies-123.netlify.app`).
-
-### Pasos extra para un toque profesional:
-- **Cambiar el nombre**: En tu panel de Netlify, ve a "Site configuration" > "Site details" > "Change site name" para poner algo como `lacasitadelasprimas.netlify.app`.
-- **Dominio propio**: Si compras un dominio `.com` o `.pe`, puedes conectarlo gratis en la sección "Domain management".
-
----
-
-## 🛠️ Otras Opciones
-
-### Vercel
-1. Crea cuenta en [vercel.com](https://vercel.com).
-2. Sube tu carpeta a [vercel.com/deploy](https://vercel.com/deploy).
-
-### GitHub Pages
-1. Sube tu código a un repositorio de GitHub.
-2. Activa GitHub Pages en `Settings > Pages`.
+## 3. ¿Cómo cambiar el nombre del link?
+Una vez subido el sitio:
+1. Haz clic en **"Site configuration"**.
+2. Busca el botón **"Change site name"**.
+3. Escribe el nombre que quieras (ej: `lacasitadelasprimas`) y guarda.
 
 ---
-
-## 📝 Notas del Propietario
-- **WhatsApp**: Revisa `components/CartSidebar.tsx` para cambiar el número de teléfono.
-- **Pagos**: El QR de Yape ya está configurado con la imagen que proporcionaste.
+**Nota:** Este proyecto usa módulos nativos de navegador (ESM), por lo que **NO** necesita comandos de instalación (`npm install`) ni de construcción (`npm build`). Funciona directo al subirlo.
