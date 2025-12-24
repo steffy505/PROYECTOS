@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Navbar from './components/Navbar';
 import CartSidebar from './components/CartSidebar';
@@ -12,6 +11,11 @@ const App: React.FC = () => {
   const [currentView, setCurrentView] = React.useState<ViewType>('inicio');
   const [cartItems, setCartItems] = React.useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = React.useState(false);
+
+  // Efecto para subir al inicio cada vez que cambiamos de pestaña
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [currentView]);
 
   const handleAddToCart = (product: Product) => {
     setCartItems(prev => {
